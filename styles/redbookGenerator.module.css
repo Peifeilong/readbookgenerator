@@ -1,0 +1,233 @@
+/* 全局容器样式 */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #333;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* 头部样式 */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #ff6b6b, #feca57, #48dbfb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 输入卡片样式 */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardHover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 表单组样式 */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.selectWrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.select {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.selectFocus {
+  outline: none;
+  border-color: #ff6b6b;
+  background-color: white;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+  transition: border 0.2s ease;
+  line-height: 1.6;
+}
+
+.textareaFocus {
+  outline: none;
+  border-color: #ff6b6b;
+}
+
+/* 按钮组样式 */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.primaryButton {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryButtonDisabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.primaryButton:hover:not(.primaryButtonDisabled) {
+  background-color: #ff5252;
+}
+
+.primaryButton:active:not(.primaryButtonDisabled) {
+  transform: scale(0.98);
+}
+
+.secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondaryButton:hover {
+  border-color: #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* 结果卡片样式 */
+.resultCard {
+  background: linear-gradient(135deg, #fff8f8 0%, #fef7fb 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 1rem;
+  border: 1px solid #ffe5e5;
+}
+
+.resultTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resultContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  white-space: pre-wrap;
+  margin: 0 0 1.5rem 0;
+}
+
+.copyButton {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ff6b6b;
+  background-color: white;
+  color: #ff6b6b;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyButton:hover:not(.copyButtonSuccess) {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.copyButtonSuccess {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* 加载动画 */
+.loadingSpinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
