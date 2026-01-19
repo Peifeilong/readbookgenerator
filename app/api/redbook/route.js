@@ -31,7 +31,7 @@ export async function POST(req) {
 
     // 3. 调用千帆大模型（OpenAI 兼容接口，支持流式）
     const stream = await client.chat.completions.create({
-      model: "ernie-4.0-turbo-8k", // 优先用3.5，免费额度多；也可用ernie-4.0-turbo-8k
+      model: "ernie-4.5-turbo-32k", // 优先用3.5，免费额度多；也可用ernie-4.0-turbo-8k
       messages: [{ role: "user", content: prompt }],
       stream: true, // 开启流式输出（和OpenAI逻辑完全一致）
       temperature: 0.8, // 创意度
