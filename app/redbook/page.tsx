@@ -28,7 +28,7 @@ export default function RedbookGenerator() {
     let accumulatedContent = "";
 
     try {
-      const res = await fetch("/api/redbook", {
+      const res: any = await fetch("/api/redbook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ style: styleType, track, keyword }),
@@ -56,7 +56,7 @@ export default function RedbookGenerator() {
           setResult(accumulatedContent);
         }
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("生成失败：", error);
       setResult(`😭 生成失败：${error.message}`);
     } finally {
